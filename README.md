@@ -480,7 +480,7 @@ python -m patternsmith.inference --help
 Clone the repository:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/ramu1904/PatternSmith.git
 cd PatternSmith
 ```
 
@@ -529,52 +529,64 @@ python scripts/train.py --help
 PatternSmith/
 │
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── splits/
+│   ├── raw/NL-RX-Turk/
+│   ├── processed/NL-RX-Turk/
+│   └── splits/NL-RX-Turk/
+│
+├── notebooks/
+│   └── PatternSmith_modeltrain.ipynb
 │
 ├── outputs/
-│   ├── inference/
-│   └── error_analysis/
+│   └── inference/
+│       ├── semantic_evaluation.csv
+│       └── test_predictions.csv
 │
 ├── scripts/
 │   ├── audit_dataset.py
+│   ├── audit_tokenization.py
 │   ├── clean_dataset.py
 │   ├── create_splits.py
-│   ├── audit_tokenization.py
 │   ├── train.py
 │   ├── evaluate_inference.py
-│   ├── evaluate_semantics.py
-│   └── analyze_errors.py
+│   └── evaluate_semantics.py
 │
 ├── src/
 │   └── patternsmith/
 │       ├── data/
-│       │   ├── dataset.py
-│       │   └── collate.py
+│       │   ├── __init__.py
+│       │   ├── collate.py
+│       │   └── dataset.py
 │       │
-│       ├── models/
-│       │   ├── embeddings.py
+│       ├── model/
 │       │   ├── attention.py
-│       │   ├── transformer_block.py
-│       │   ├── feed_forward.py
-│       │   └── gpt.py
+│       │   ├── embeddings.py
+│       │   ├── gpt_model.py
+│       │   ├── mlp.py
+│       │   ├── multi_head_attention.py
+│       │   └── transformer_block.py
 │       │
 │       ├── training/
-│       │   ├── optimizer.py
-│       │   ├── scheduler.py
-│       │   ├── gradient_clipping.py
-│       │   ├── engine.py
+│       │   ├── __init__.py
+│       │   ├── checkpoint.py
 │       │   ├── early_stopping.py
-│       │   └── checkpoint.py
+│       │   ├── engine.py
+│       │   ├── gradient_clipping.py
+│       │   ├── optimizer.py
+│       │   └── scheduler.py
 │       │
+│       ├── __init__.py
 │       └── inference.py
 │
 ├── tests/
-├── pyproject.toml
-├── requirements.txt
+│   ├── data/
+│   ├── model/
+│   └── training/
+│
 ├── .gitignore
-└── README.md
+├── LICENSE
+├── README.md
+├── pyproject.toml
+└── requirements.txt
 ```
 
 ## Testing
@@ -606,7 +618,7 @@ pytest -q
 Check formatting:
 
 ```bash
-black --check src tests scripts
+black --check src tests scripts/audit_dataset.py scripts/audit_tokenization.py scripts/clean_dataset.py scripts/create_splits.py scripts/train.py scripts/evaluate_inference.py scripts/evaluate_semantics.py
 ```
 
 ## Limitations
