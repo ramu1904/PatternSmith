@@ -1,0 +1,9 @@
+{
+    "original_examples": 10000,
+    "conflicting_descriptions": 167,
+    "rows_with_conflicting_descriptions": 391,
+    "exact_duplicate_pairs_removed": 1,
+    "processed_examples": 9608,
+    "excluded_examples": 392,
+    "policy": "Exclude descriptions with multiple distinct target strings; remove subsequent occurrences of exact duplicate pairs."
+}

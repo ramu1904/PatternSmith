@@ -1,0 +1,46 @@
+{
+    "dataset": "NL-RX-Turk",
+    "total_examples": 9608,
+    "random_seed": 42,
+    "split_ratios": {
+        "train": 0.65,
+        "validation": 0.1,
+        "test": 0.25
+    },
+    "split_sizes": {
+        "train": 6245,
+        "validation": 961,
+        "test": 2402
+    },
+    "description_audit": {
+        "unique_descriptions": 9608,
+        "repeated_description_groups": 0
+    },
+    "target_audit": {
+        "unique_targets": 9289,
+        "repeated_target_groups": 311,
+        "examples_with_repeated_targets": 630,
+        "maximum_target_frequency": 3
+    },
+    "target_overlap_with_training": {
+        "validation": {
+            "examples": 961,
+            "examples_with_target_seen_in_train": 37,
+            "examples_with_unseen_target": 924,
+            "seen_target_percentage": 3.85,
+            "unseen_target_percentage": 96.15,
+            "unique_targets": 957,
+            "unique_targets_also_in_train": 36
+        },
+        "test": {
+            "examples": 2402,
+            "examples_with_target_seen_in_train": 101,
+            "examples_with_unseen_target": 2301,
+            "seen_target_percentage": 4.2,
+            "unseen_target_percentage": 95.8,
+            "unique_targets": 2378,
+            "unique_targets_also_in_train": 100
+        }
+    },
+    "policy": "Deterministic random split after verifying that all descriptions are unique. Repeated regex targets are measured but not grouped across splits."
+}
