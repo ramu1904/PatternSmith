@@ -456,6 +456,8 @@ Install Hugging Face Hub:
 
 ```bash
 python -m pip install -U huggingface_hub
+
+hf download Ramu1904/PatternSmith best.pt --local-dir checkpoints
 ```
 
 ## Inference
