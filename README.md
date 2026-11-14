@@ -456,6 +456,7 @@ Install Hugging Face Hub:
 
 ```bash
 python -m pip install -U huggingface_hub
+```
 
 ## Inference
 
