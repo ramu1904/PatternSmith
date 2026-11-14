@@ -444,6 +444,19 @@ A Python `re.compile()` diagnostic succeeded for 2,329 of 2,402 predictions.
 
 This is a preliminary Python-regex syntax check, not a complete BRICS grammar validation. Python's regex dialect does not implement all BRICS operators and semantics.
 
+## Pretrained Checkpoint
+
+The trained PatternSmith model checkpoint is hosted on Hugging Face.
+
+**[Download PatternSmith Checkpoint](https://huggingface.co/Ramu1904/PatternSmith)**
+
+### Download the checkpoint
+
+Install Hugging Face Hub:
+
+```bash
+python -m pip install -U huggingface_hub
+
 ## Inference
 
 PatternSmith generates regex expressions using greedy autoregressive decoding.
